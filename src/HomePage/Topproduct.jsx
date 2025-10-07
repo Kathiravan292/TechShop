@@ -3,14 +3,14 @@ import { useNavigate, Link } from 'react-router-dom';
 import productsData from '../assets/productsData';
 import { BsArrowRight } from 'react-icons/bs';
 import { useDispatch } from 'react-redux';
-import { addToCart } from '../assets/Cartslice'; // 👈 make sure this is imported
+import { addToCart } from '../assets/Cartslice'; 
 
 const Allproduct = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const heroProducts = productsData.slice(4, 15);
 
-  // ✅ Moved inside component
+
   const Addtocarthandler = (product) => {
     dispatch(addToCart(product));
   };
@@ -133,3 +133,4 @@ const Allproduct = () => {
 };
 
 export default Allproduct;
+
